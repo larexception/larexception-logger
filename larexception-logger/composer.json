@@ -1,0 +1,51 @@
+{
+    "name": "larexception/larexception-logger",
+    "description": "Output your laravel exceptions to an external service",
+    "keywords": [
+        "larexception",
+        "Laravel Exceptions",
+        "Laravel exception logger"
+    ],
+    "homepage": "https://github.com/larexception/larexception-logger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Heinrich",
+            "email": "nathan@halfinity.com",
+            "homepage": "https://halfinity.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "guzzle/guzzle": "^6.0",
+        "laravel/framework": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larexception\\LarexceptionLogger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Larexception\\LarexceptionLogger\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larexception\\LarexceptionLogger\\LarexceptionLoggerServiceProvider"
+            ]
+        }
+    }
+}
